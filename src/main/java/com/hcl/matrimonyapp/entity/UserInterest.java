@@ -14,11 +14,11 @@ public class UserInterest {
 
 	@OneToOne
 	@JoinColumn(name = "userId")
-	private User userId;
+	private Profile userId;
 
 	@OneToOne
 	@JoinColumn(name = "userId")
-	private User interestId;
+	private Profile userInterestProfileId;
 
 	public Integer getUserInterestId() {
 		return userInterestId;
@@ -28,20 +28,21 @@ public class UserInterest {
 		this.userInterestId = userInterestId;
 	}
 
-	public User getUserId() {
+	public Profile getUserId() {
 		return userId;
 	}
 
-	public void setUserId(User userId) {
+	public void setUserId(Profile userId) {
 		this.userId = userId;
 	}
 
-	public User getInterestId() {
-		return interestId;
+	public Profile getUserInterestProfileId() {
+		return userInterestProfileId;
 	}
 
-	public void setInterestId(User interestId) {
-		this.interestId = interestId;
+	public void setUserInterestProfileId(Profile userInterestProfileId) {
+		this.userInterestProfileId = userInterestProfileId;
 	}
+
 
 }
