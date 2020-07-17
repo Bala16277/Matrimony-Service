@@ -6,39 +6,39 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class User {
+public class Profile {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer userId;
-	
+	private Integer profileId;
+
 	private String userName;
-	
+
 	private String password;
-	
+
 	private String email;
-	
+
 	private String phoneNumber;
-	
+
 	private String firstName;
-	
+
 	private String lastName;
-	
+
 	private String gender;
-	
+
 	private Integer age;
-	
+
 	private String religion;
-	
+
 	private String location;
-	
+
 	private String motherTongue;
 
-	public Integer getUserId() {
-		return userId;
+	public Integer getProfileId() {
+		return profileId;
 	}
 
-	public void setUserId(Integer userId) {
-		this.userId = userId;
+	public void setProfileId(Integer profileId) {
+		this.profileId = profileId;
 	}
 
 	public String getUserName() {
@@ -128,6 +128,5 @@ public class User {
 	public void setMotherTongue(String motherTongue) {
 		this.motherTongue = motherTongue;
 	}
-
 
 }
