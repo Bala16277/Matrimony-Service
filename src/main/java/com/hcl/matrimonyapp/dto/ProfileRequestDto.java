@@ -1,16 +1,6 @@
-package com.hcl.matrimonyapp.entity;
+package com.hcl.matrimonyapp.dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
-public class Profile {
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer profileId;
+public class ProfileRequestDto {
 
 	private String userName;
 
@@ -34,13 +24,15 @@ public class Profile {
 
 	private String motherTongue;
 
-	public Integer getProfileId() {
-		return profileId;
-	}
+	private Integer preferenceAge;
 
-	public void setProfileId(Integer profileId) {
-		this.profileId = profileId;
-	}
+	private String preferenceGender;
+
+	private String preferenceLocation;
+
+	private String preferenceReligion;
+
+	private String preferenceMotherTongue;
 
 	public String getUserName() {
 		return userName;
@@ -128,6 +120,46 @@ public class Profile {
 
 	public void setMotherTongue(String motherTongue) {
 		this.motherTongue = motherTongue;
+	}
+
+	public Integer getPreferenceAge() {
+		return preferenceAge;
+	}
+
+	public void setPreferenceAge(Integer preferenceAge) {
+		this.preferenceAge = preferenceAge;
+	}
+
+	public String getPreferenceGender() {
+		return preferenceGender;
+	}
+
+	public void setPreferenceGender(String preferenceGender) {
+		this.preferenceGender = preferenceGender;
+	}
+
+	public String getPreferenceLocation() {
+		return preferenceLocation;
+	}
+
+	public void setPreferenceLocation(String preferenceLocation) {
+		this.preferenceLocation = preferenceLocation;
+	}
+
+	public String getPreferenceReligion() {
+		return preferenceReligion;
+	}
+
+	public void setPreferenceReligion(String preferenceReligion) {
+		this.preferenceReligion = preferenceReligion;
+	}
+
+	public String getPreferenceMotherTongue() {
+		return preferenceMotherTongue;
+	}
+
+	public void setPreferenceMotherTongue(String preferenceMotherTongue) {
+		this.preferenceMotherTongue = preferenceMotherTongue;
 	}
 
 }
