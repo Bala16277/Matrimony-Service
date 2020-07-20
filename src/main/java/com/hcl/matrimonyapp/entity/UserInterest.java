@@ -1,11 +1,13 @@
 package com.hcl.matrimonyapp.entity;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
+@Entity
 public class UserInterest {
 
 	@Id
@@ -13,8 +15,8 @@ public class UserInterest {
 	private Integer userInterestId;
 
 	@OneToOne
-	@JoinColumn(name = "userId")
-	private Profile userId;
+	@JoinColumn(name = "profileId")
+	private Profile profileId;
 
 	@OneToOne
 	@JoinColumn(name = "userId")
@@ -28,12 +30,12 @@ public class UserInterest {
 		this.userInterestId = userInterestId;
 	}
 
-	public Profile getUserId() {
-		return userId;
+	public Profile getProfileId() {
+		return profileId;
 	}
 
-	public void setUserId(Profile userId) {
-		this.userId = userId;
+	public void setProfileId(Profile profileId) {
+		this.profileId = profileId;
 	}
 
 	public Profile getUserInterestProfileId() {
@@ -43,6 +45,5 @@ public class UserInterest {
 	public void setUserInterestProfileId(Profile userInterestProfileId) {
 		this.userInterestProfileId = userInterestProfileId;
 	}
-
 
 }
