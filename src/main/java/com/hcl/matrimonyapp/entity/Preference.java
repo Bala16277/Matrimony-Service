@@ -24,8 +24,16 @@ public class Preference {
 
 	private String preferenceMotherTongue;
 	@OneToOne
-	@JoinColumn(name = "userId")
-	private Profile user;
+	@JoinColumn(name = "profileId")
+	private Profile profileId;
+
+	public Profile getProfileId() {
+		return profileId;
+	}
+
+	public void setProfileId(Profile profileId) {
+		this.profileId = profileId;
+	}
 
 	public Integer getPreferenceId() {
 		return preferenceId;
@@ -75,12 +83,6 @@ public class Preference {
 		this.preferenceMotherTongue = preferenceMotherTongue;
 	}
 
-	public Profile getUser() {
-		return user;
-	}
 
-	public void setUser(Profile user) {
-		this.user = user;
-	}
 
 }
